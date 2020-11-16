@@ -1,5 +1,8 @@
 package com.deepikasampangi;
 
+import com.deepikasampangi.memento.Editor;
+import com.deepikasampangi.memento.History;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -23,6 +26,22 @@ public class Main {
 //        polymorphisim exmaple
         drawUIControl(new TextBox());
         drawUIControl(new CheckBox());
+
+//        Memento Pattern
+        Editor editor = new Editor();
+        History history = new History();
+
+        editor.setContent("a");
+        history.push(editor.createState());
+
+
+        editor.setContent("b");
+        history.push(editor.createState());
+
+        editor.setContent("c");
+        editor.restore(history.pop());
+
+        System.out.println(editor.getContent());
 
     }
 
