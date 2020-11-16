@@ -20,6 +20,10 @@ public class Main {
 //        Inheritance Example
         buttons();
 
+//        polymorphisim exmaple
+        drawUIControl(new TextBox());
+        drawUIControl(new CheckBox());
+
     }
 
 //  Interface Example
@@ -43,10 +47,10 @@ public class Main {
     public static void mail(){
         MailService mailService = new MailService();
         mailService.sendEmail();
-
-
     }
 
+
+// Inheritance example
     public static void buttons(){
 //        Textbox
 //        Button
@@ -57,6 +61,11 @@ public class Main {
 //        setPosition()
         TextBox textBox = new TextBox();
         textBox.enable();
+    }
+
+//    Polymorphism
+    public static void drawUIControl(UIControl control){
+        control.draw();
     }
 
 }
