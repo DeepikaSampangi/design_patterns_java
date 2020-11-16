@@ -7,16 +7,19 @@ public class Main {
         user.name = "Deepika";
         System.out.println(user.name);
         user.sayHello();
-
+//  Interface Example
         TaxCalculator calculator = getCalculator();
         System.out.println(calculator.calculateTax());
+        //    Encapsulation Example
         account();
     }
 
+//  Interface Example
     public static TaxCalculator getCalculator(){
         return new TaxCalculator2020();
     }
 
+//    Encapsulation Example
     public static void account(){
         Account account = new Account();
         account.balance = -1;
