@@ -10,8 +10,12 @@ public class Main {
 //  Interface Example
         TaxCalculator calculator = getCalculator();
         System.out.println(calculator.calculateTax());
-        //    Encapsulation Example
+
+//    Encapsulation Example
         account();
+
+//        abstraction example
+        mail();
     }
 
 //  Interface Example
@@ -29,5 +33,13 @@ public class Main {
         account.deposit(10);
         account.withraw(5);
         System.out.println("Account balance is "+account.getPrivate_balance());
+    }
+    
+// Abstraction example
+    public static void mail(){
+        MailService mailService = new MailService();
+        mailService.sendEmail();
+
+
     }
 }
