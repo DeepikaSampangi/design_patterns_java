@@ -10,9 +10,21 @@ public class Main {
 
         TaxCalculator calculator = getCalculator();
         System.out.println(calculator.calculateTax());
+        account();
     }
 
     public static TaxCalculator getCalculator(){
         return new TaxCalculator2020();
+    }
+
+    public static void account(){
+        Account account = new Account();
+        account.balance = -1;
+//        account.private_balance = -1; cant access as its private
+        account.setPrivate_balance(-1);
+
+        account.deposit(10);
+        account.withraw(5);
+        System.out.println("Account balance is "+account.getPrivate_balance());
     }
 }
