@@ -16,6 +16,10 @@ public class Main {
 
 //        abstraction example
         mail();
+
+//        Inheritance Example
+        buttons();
+
     }
 
 //  Interface Example
@@ -34,7 +38,7 @@ public class Main {
         account.withraw(5);
         System.out.println("Account balance is "+account.getPrivate_balance());
     }
-    
+
 // Abstraction example
     public static void mail(){
         MailService mailService = new MailService();
@@ -42,4 +46,17 @@ public class Main {
 
 
     }
+
+    public static void buttons(){
+//        Textbox
+//        Button
+//        CheckBox
+
+//        enable()
+//        focus()
+//        setPosition()
+        TextBox textBox = new TextBox();
+        textBox.enable();
+    }
+
 }
